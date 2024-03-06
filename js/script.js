@@ -8,7 +8,7 @@
  // dichiario variabili
 
  let kilometri = parseInt(prompt ('Quanti kilometri vuoi fare?'));
- let anni = parseInt (prompt('quanti anni hai?'));
+ let anni = parseInt(prompt('quanti anni hai?'));
  let prezzoViaggio = 2.1 * kilometri;
 
  console.log (kilometri,anni,prezzoViaggio)
@@ -17,19 +17,23 @@
 if((isNaN(kilometri) && isNaN(anni)) || (isNaN(kilometri) && !isNaN(anni)) || (!isNaN(kilometri) && isNaN(anni))) {
     console.log('valore errato'); 
 } else {
-    console.log('i kilometri inseriti sono' + $(kilometri), 'hai: '
-    + $(anni), 'prezzo del viaggio: ' + $(prezzoViaggio));
+    console.log(`i kilometri inseriti sono ${kilometri}, hai
+    ${anni}, prezzo del viaggio ${prezzoViaggio}`);
 }
 
 //applico lo sconto 
-let scontoMinorenne = anni < 18;
-let scontoAdulti = anni >= 65;
-let prezzoScontatoMinorenne = (prezzoViaggio - (prezzoViaggio * 0.20));
-let prezzoScontatoAdulto = (prezzoViaggio - (prezzoViaggio * 0.40));
+let minorenne = anni < 18;
+let adulto = anni >= 65;
+let messaggio =(`i kilometri inseriti sono ${kilometri}, hai ${anni}, il prezzo viaggio è ${prezzoViaggio}`);
+// let prezzoScontatoAdulto = (prezzoViaggio - (prezzoViaggio * 0.40));
 
-if (anni === scontoMinorenne) {
-   console.log (`hai diritto ad uno sconto! i kilometri inseriti sono: ${kilometri}, hai: ${annni}, prezzo del viaggio: ${prezzoScontatoMinorenne} `);
-}
+if (minorenne) {
+    prezzoViaggio = (prezzoViaggio - (prezzoViaggio * 0.20));
+    messsaggio = `hai diritto ad uno sconto! i kilometri inseriti sono ${kilometri}, i tuoi anni sono ${anni}, il prezzo viaggio scontato è ${prezzoViaggio}`;
+
+    console.log(messaggio);
+    
+ }
     
 
 
