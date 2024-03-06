@@ -7,13 +7,11 @@
 
  // dichiario variabili
 
- let kilometri = prompt ('Quanti kilometri vuoi fare?');
+ let kilometri = parseInt(prompt ('Quanti kilometri vuoi fare?'));
  let anni = parseInt (prompt('quanti anni hai?'));
- const prezzoViaggio = 2.1 * kilometri;
+ let prezzoViaggio = 2.1 * kilometri;
 
-
- console.log(kilometri, anni, prezzoViaggio);
-
- if (isNaN, kilometri) {
-    console.log ('inserisci i kilometri');
- }
+//controllo i valori inseriti
+if((isNaN(kilometri) && isNaN(anni)) || (isNaN(kilometri) && !isNaN(anni)) || (!isNaN(kilometri) && isNaN(anni))) {
+    console.log('valore errato'); 
+}
