@@ -37,6 +37,8 @@ if (minorenne) {
 
     console.log(messaggio);
  }
-    
-document.getElementById('price').innerHTML = `${messaggio}`;
+
+document.getElementById('price').innerHTML = ` <h1> Biglietto Uber</h1>
+<h3>${messaggio}</h3>
+`;
 
