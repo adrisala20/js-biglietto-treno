@@ -11,7 +11,17 @@
  let anni = parseInt (prompt('quanti anni hai?'));
  let prezzoViaggio = 2.1 * kilometri;
 
+ console.log (kilometri,anni,prezzoViaggio)
+
+ let scontoMinorenni = anni < 18;
+ let scontoAdulti = anni >= 65;
 //controllo i valori inseriti
 if((isNaN(kilometri) && isNaN(anni)) || (isNaN(kilometri) && !isNaN(anni)) || (!isNaN(kilometri) && isNaN(anni))) {
     console.log('valore errato'); 
+} else {
+    console.log('i kilometri inseriti sono' + $(kilometri), 'hai: '
+    + $(annni), 'prezzo del viaggio: ' + $(prezzoViaggio));
 }
+    
+
+
