@@ -25,15 +25,18 @@ if((isNaN(kilometri) && isNaN(anni)) || (isNaN(kilometri) && !isNaN(anni)) || (!
 let minorenne = anni < 18;
 let adulto = anni >= 65;
 let messaggio =(`i kilometri inseriti sono ${kilometri}, hai ${anni}, il prezzo viaggio è ${prezzoViaggio}`);
-// let prezzoScontatoAdulto = (prezzoViaggio - (prezzoViaggio * 0.40));
 
 if (minorenne) {
     prezzoViaggio = (prezzoViaggio - (prezzoViaggio * 0.20));
-    messsaggio = `hai diritto ad uno sconto! i kilometri inseriti sono ${kilometri}, i tuoi anni sono ${anni}, il prezzo viaggio scontato è ${prezzoViaggio}`;
+    messaggio = `hai diritto ad uno sconto! i kilometri inseriti sono ${kilometri} , i tuoi anni sono ${anni} , il prezzo viaggio scontato è ${prezzoViaggio}`;
+
+    console.log(messaggio); 
+ } else if (adulto){
+    prezzoViaggio = (prezzoViaggio - (prezzoViaggio * 0.40));
+    messaggio = `hai diritto ad uno sconto! i kilometri inseriti sono ${kilometri} , i tuoi anni sono ${anni} , il prezzo viaggio scontato è ${prezzoViaggio}`;
 
     console.log(messaggio);
-    
  }
     
-
+document.getElementById('price').innerHTML = `${messaggio}`;
 
